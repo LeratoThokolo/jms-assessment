@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://absa.assessment.co.za/message">
+
+    <element name="Message">
+        <complexType>
+            <sequence>
+                <element name="messageId" type="int"/>
+                <element name="messageBody" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+
+
+
+</schema>
