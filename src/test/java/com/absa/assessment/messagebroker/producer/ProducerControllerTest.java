@@ -1,5 +1,6 @@
 package com.absa.assessment.messagebroker.producer;
 
+import com.fasterxml.jackson.databind.JsonSerializable;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
 import org.junit.Test;
@@ -57,7 +58,7 @@ public class ProducerControllerTest {
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/api/publish/message").accept(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON)
-                .content(String.valueOf(dataToPost))
+                .content(dataToPost)
                 .contentType(MediaType.APPLICATION_JSON);
 
         MvcResult result = mockMvc.perform(requestBuilder).andReturn();
